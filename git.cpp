@@ -2,27 +2,27 @@
  Git configration-
 (1) git config --global user.name "my name"
 (2) git config --global user.email "mu email"
-(3) git config --list 
+(3) git config --list. 
 
 different staus of files -
 (1) Untracked (U) = new file that git isn't tracking
 (2) Modified (M) = something is changed in the file which isn't updated in Git
 (3) Staged (A) = file is ready to be commited
-(4) Unmodified () = unchanged
+(4) Unmodified () = unchanged.
 
 commonly used commands-
 (1) cd [folder name] --> it gets you inside a folder.
                      you can press TAB to autocomplete the folder name  (cd = change directory)
-(2) cd ..   --> it gets you out of the folder
+(2) cd ..   --> it gets you out of the folder.
 (3) code [file name or file address]     --> it helps open a file. 
 (4) git clone [link of repo]  --> it copies repository from github into your desktop
 (5) git status    --> it shows the status of the diffrent files
 (6) ls   --> it shows all the  files in the folder
 (7) ls -a   --> it shows all the files, even the hidden ones in a folder
 (8) git add [file name]  --> it adds a new or changed files in git staging area, ready to be commited
-    commonly used is git pusg origin main
+    commonly used is git pusg origin main.
 (9) git commit -m "some descripion about the change"  --> it commits the file. you can also say it saves the new or changed file in git
-                                                         ( a file must be added first using git add before it gets saved by using git commit)
+                                                         (a file must be added first using git add before it gets saved by using git commit)
 (10) fir add .  --> it adds all the files
 (11) git push [repo name] [branch name]  --> it is used to upload the saved files in git to the github.
 (12) git init  --> used to create new .git file inside the folder
