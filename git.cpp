@@ -26,7 +26,7 @@ commonly used commands-
 (10) fir add .  --> it adds all the files
 (11) git push [repo name] [branch name]  --> it is used to upload the saved files in git to the github.
 (12) git init  --> used to create new .git file inside the folder
-(13) git remote origin [link]  -->
+(13) git remote origin [link]  --> it links repo where you wish to push
 (14) git remote -v   --> to verify remote
 (15) git branch   --> to check branch
 (16) git branch -M [branch name]  --> to rename branch
