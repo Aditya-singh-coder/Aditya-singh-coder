@@ -37,4 +37,5 @@ commonly used commands-
 (21) mv .git .git_backup  --> it will deactivate .git file
 (22) mv .git_backup .git   --> it will reactivate .git file
 (23) mv [file old name] [file new name]  --> it is used change name of the file
+(24) git ls-tree --name-only [branch name] [diresctory name]  --> it is used to see the list of folders or file in remote directory
 */
