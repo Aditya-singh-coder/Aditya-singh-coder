@@ -38,4 +38,5 @@ commonly used commands-
 (22) mv .git_backup .git   --> it will reactivate .git file
 (23) mv [file old name] [file new name]  --> it is used change name of the file
 (24) git ls-tree --name-only [branch name] [diresctory name]  --> it is used to see the list of folders or file in remote directory
+(25) git push -u origin main --> use it so that you only need to write git push to push folder to remote repo 
 */
