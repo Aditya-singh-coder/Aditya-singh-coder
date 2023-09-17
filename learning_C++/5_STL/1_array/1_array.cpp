@@ -18,7 +18,7 @@ int main()
 
     cout<< "element at 2nd index " << a.at(2) << endl;  // (4) it tells about the element at specific address in array
 
-    cout << "empty or not--> " << a.empty() << endl;  // (5) it is a boolean. it tells if element is empty or not 
+    cout << "empty or not--> " << a.empty() << endl;  // (5) it is a boolean. it tells if element is empty or not
 
     cout << "first element " << a.front() << endl;      // (6) it tells the first element of the array
     cout << "last element " << a.back() << endl;        // (7) it tells last element in array
