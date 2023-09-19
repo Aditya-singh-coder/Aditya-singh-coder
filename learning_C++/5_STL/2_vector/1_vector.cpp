@@ -47,5 +47,8 @@ int main()
         cout << i << " ";
      }
      */
-
+    v.resize(8);                    //changes the size of array
+    v.insert(v.begin() + 2,7);      // it is used to insert an element at specific location. it uses varaible.insert(address,element)
+    v.erase(v.end()-2);            //it is used to delete an element at specfic position. it uses variable.insert(address)
+    // v.clear                    //it is used to clear whole array    
 }
