@@ -1,15 +1,11 @@
 #include<iostream>
 using namespace std;
 int main() {
-    int arr[7]={0};
-    cout << "enter the numbers you wish to sort " << endl;
-
-    for(int i=0; i<7; i++) {
-    cin >> arr[i];
-    }
+    int n = 7;
+    int arr[n] = {1,32,7,44,36,2,6};
     cout << " the sorted numbers are: " <<endl;
-    for(int a=0; a<7; a++) {
-        for(int b=a+1; b<7; b++) {
+    for(int a=0; a<n; a++) {
+        for(int b=a+1; b<n; b++) {
             if( arr[b] < arr[a]) {
                 swap( arr[a], arr[b]);
             }
