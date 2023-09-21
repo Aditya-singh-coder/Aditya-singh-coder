@@ -2,12 +2,12 @@
 using namespace std;
 int main()
 {
-    int i, key, j, n = 6;
+    int  n = 6;
     int arr[n] = {5, 2, 4, 6, 1, 3};
-    for (i = 1; i < n; i++)
+    for (int i = 1; i < n; i++)
     {
-        key = arr[i];
-        j = i - 1;
+        int key = arr[i];
+        int j = i - 1;
 
         while (j >= 0 && arr[j] > key)
         {
