@@ -6,7 +6,7 @@ int main()
     vector<int> v;                              //this is how you intialize a vector array
     /*we can also intialize like this
     vector<int> a(5,1)       --> here an array of size 5 have has been intialized whose each element is 1.
-                                 if we wrote it like a(5) only it would have made array of size 5 with all the numbers as 0 b default.)*/
+                                 if we wrote it like a(5) only it would have made array of size 5 with all the numbers as 0 by default.)*/
     cout << "capacity " << v.capacity() <<endl;  //capacity shows the actual size of array
                                                  //intial size of a vector is 0.
 
