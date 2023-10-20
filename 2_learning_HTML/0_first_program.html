@@ -1,32 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            my page
-        </title>
-    </head>
-    <body  style="background-color:chartreuse;">
-        hello  world
-        <h1 style="font-size:32px;">Heading 1</h1>
-        <p>You can change the size of a heading with the style attribute, using the font-size property.</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_waiting_in_Namibia.jpg/1200px-Lion_waiting_in_Namibia.jpg" width="450" height="400" alt="a lion sitting">
-        <p style="color: red;"> this line is red </p>
-        <h2 title="I'm a header">The title Attribute</h2>
+  <head>
+    <title>my page</title>
+    <style>
+      .myDiv {
+        border: 5px outset red;
+        background-color: lightblue;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body style="background-color: chartreuse">
+    <h1>The div element</h1>
 
-        <p title="I'm a tooltip">Mouse over this paragraph, to display the title attribute as a tooltip.</p>
+    <div class="myDiv">
+      <h2>This is a heading in a div element</h2>
+      <p>This is some text in a div element.</p>
+    </div>
 
-        <h1>This is heading 1</h1>
-        <p>There will line under it</p>
-        <hr>
+    <p>This is some text outside the div element.</p>
 
-        <h2>This is heading 2</h2>
-        <p>This is some other text.</p>
-        <hr>
+    hello world
+    <h1 style="font-size: 32px">Heading 1</h1>
+    <p>
+      You can change the size of a heading with the style attribute, using the
+      font-size property.
+    </p>
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_waiting_in_Namibia.jpg/1200px-Lion_waiting_in_Namibia.jpg"
+      width="450"
+      height="400"
+      alt="a lion sitting"
+    />
+    <p style="color: red">this line is red</p>
+    <h2 title="I'm a header">The title Attribute</h2>
 
-        <h2>This is heading 2</h2>
-        <p>This is some other text.</p>
+    <p title="I'm a tooltip">
+      Mouse over this paragraph, to display the title attribute as a tooltip.
+    </p>
 
-        <pre>
+    <h1>This is heading 1</h1>
+    <p>There will line under it</p>
+    <hr />
+
+    <h2>This is heading 2</h2>
+    <p>This is some other text.</p>
+    <hr />
+
+    <h2>This is heading 2</h2>
+    <p>This is some other text.</p>
+
+    <pre>
             My Bonnie lies over the ocean.
           
             My Bonnie lies over the sea.
@@ -34,79 +58,95 @@
             My Bonnie lies over the ocean.
           
             Oh, bring back my Bonnie to me.
-          </pre> 
-          <p style="background-color:rebeccapurple">This has purple background.</p><br>
-          <p style="font-family:cursive">This has cursive style.</p><br>
-          <p style="font-size:160%;">This is written big.</p><br>
-          <p style="text-align:center;">Centered paragraph.</p><br>
-          <b>This text is bold</b> 
-          <strong>This text is important!</strong> 
-          <i>This text is italic</i> 
-          <em>This text is emphasized</em> 
-          <small>This is some smaller text.</small>
-          <p>Do not forget to buy <mark>milk</mark> today.</p>
-          <p>My favorite color is <del>blue</del> red.</p>
-          <p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
-          <p>This is <sub>subscripted</sub> text.</p>
-          <p>This is <sup>superscripted</sup> text.</p>
-          <blockquote>
-            "I have a dream that one day this nation will rise up and live out the true meaning of its creed: 'We hold these truths to be self-evident, that all men are created equal.'"
-            <cite>Martin Luther King Jr.</cite>
-          </blockquote>
-          <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p> 
-          <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p> 
-          <address>
-            Written by John Doe.<br>
-            Visit us at:<br>
-            Example.com<br>
-            Box 564, Disneyland<br>
-            USA
-            </address> 
-            <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
-            <bdo dir="rtl">This text will be written from right to left</bdo>
-            <!-- Write your comments here -->
-            <h1 style="border:2px solid Tomato;">Hello World</h1>
-            <!--using different ways of adding colours-->
-            <h1 style="background-color:rgb(255, 99, 71);">...</h1>
-            <h1 style="background-color:#ff6347;">...</h1>
-            <h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
-            
-            <h1 style="background-color:rgba(255, 99, 71, 0.5);">...</h1>
-            <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h1>
-            <table>
-            <tr>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>5</td>
-              <td>6</td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>8</td>
-              <td>9</td>
-            </tr>
-            </table>
-            <ul>
-              <li>apple</li>
-              <li>banana</li>
-              <li>pineapple</li>
-            </ul>
-            <ol>
-              <li>wake up</li>
-              <li>tie shoes</li>
-              <li> go for run</li>
-            </ol>
-            <p> <b>apple</b>
-               <i>apple</i>
-               <u>apple</u>
-               <s>apple</s>
-              </p>
-              <p>click on link. it will open in a new window or tab: <a href="https://www.w3schools.com" target="_blank">Visit W3Schools!</a></p>
-              <!-- <!DOCTYPE html>
+          </pr>
+    <p style="background-color: rebeccapurple">This has purple background.</p>
+    <br />
+    <p style="font-family: cursive">This has cursive style.</p>
+    <br />
+    <p style="font-size: 160%">This is written big.</p>
+    <br />
+    <p style="text-align: center">Centered paragraph.</p>
+    <br />
+    <b>This text is bold</b>
+    <strong>This text is important!</strong>
+    <i>This text is italic</i>
+    <em>This text is emphasized</em>
+    <small>This is some smaller text.</small>
+    <p>Do not forget to buy <mark>milk</mark> today.</p>
+    <p>My favorite color is <del>blue</del> red.</p>
+    <p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
+    <p>This is <sub>subscripted</sub> text.</p>
+    <p>This is <sup>superscripted</sup> text.</p>
+    <blockquote>
+      "I have a dream that one day this nation will rise up and live out the
+      true meaning of its creed: 'We hold these truths to be self-evident, that
+      all men are created equal.'"
+      <cite>Martin Luther King Jr.</cite>
+    </blockquote>
+    <p>
+      WWF's goal is to:
+      <q>Build a future where people live in harmony with nature.</q>
+    </p>
+    <p>
+      The <abbr title="World Health Organization">WHO</abbr> was founded in
+      1948.
+    </p>
+    <address>
+      Written by John Doe.<br />
+      Visit us at:<br />
+      Example.com<br />
+      Box 564, Disneyland<br />
+      USA
+    </address>
+    <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+    <bdo dir="rtl">This text will be written from right to left</bdo>
+    <!-- Write your comments here -->
+    <h1 style="border: 2px solid Tomato">Hello World</h1>
+    <!--using different ways of adding colours-->
+    <h1 style="background-color: rgb(255, 99, 71)">...</h1>
+    <h1 style="background-color: #ff6347">...</h1>
+    <h1 style="background-color: hsl(9, 100%, 64%)">...</h1>
+
+    <h1 style="background-color: rgba(255, 99, 71, 0.5)">...</h1>
+    <h1 style="background-color: hsla(9, 100%, 64%, 0.5)">...</h1>
+    <table>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </table>
+    <ul>
+      <li>apple</li>
+      <li>banana</li>
+      <li>pineapple</li>
+    </ul>
+    <ol>
+      <li>wake up</li>
+      <li>tie shoes</li>
+      <li>go for run</li>
+    </ol>
+    <p>
+      <b>apple</b>
+      <i>apple</i>
+      <u>apple</u>
+      <s>apple</s>
+    </p>
+    <p>
+      click on link. it will open in a new window or tab:
+      <a href="https://www.w3schools.com" target="_blank">Visit W3Schools!</a>
+    </p>
+    <!-- <!DOCTYPE html>
 <html>
 <head>
   <base target="_blank">
@@ -121,78 +161,121 @@
 </body>
 </html> -->
 
-<!-- The <map> tag is used to define an image map. An image map is an image with clickable areas. -->
-<img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+    <!-- The <map> tag is used to define an image map. An image map is an image with clickable areas. -->
+    <img
+      src="workplace.jpg"
+      alt="Workplace"
+      usemap="#workmap"
+      width="400"
+      height="379"
+    />
 
-<map name="workmap">
-  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
-  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
-  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
-</map> 
+    <map name="workmap">
+      <area
+        shape="rect"
+        coords="34,44,270,350"
+        alt="Computer"
+        href="computer.htm"
+      />
+      <area
+        shape="rect"
+        coords="290,172,333,250"
+        alt="Phone"
+        href="phone.htm"
+      />
+      <area
+        shape="circle"
+        coords="337,300,44"
+        alt="Cup of coffee"
+        href="coffee.htm"
+      />
+    </map>
 
-<article class="all-browsers">
-  <h1>Most Popular Browsers</h1>
-  <article class="browser">
-    <h2>Google Chrome</h2>
-    <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
-  </article>
-  <article class="browser">
-    <h2>Mozilla Firefox</h2>
-    <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
-  </article>
-  <article class="browser">
-    <h2>Microsoft Edge</h2>
-    <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
-  </article>
-</article>
-<button type="button" onclick="alert('Hello world!')">Click Me!</button>
-<!-- the autofocus puts 1st focus or priority on the button  -->
-<!-- <button type="button" autofocus onclick="alert('Hello world!')">Click Me!</button> -->
-<button type="button" disabled>Click Me!</button>
+    <article class="all-browsers">
+      <h1>Most Popular Browsers</h1>
+      <article class="browser">
+        <h2>Google Chrome</h2>
+        <p>
+          Google Chrome is a web browser developed by Google, released in 2008.
+          Chrome is the world's most popular web browser today!
+        </p>
+      </article>
+      <article class="browser">
+        <h2>Mozilla Firefox</h2>
+        <p>
+          Mozilla Firefox is an open-source web browser developed by Mozilla.
+          Firefox has been the second most popular web browser since January,
+          2018.
+        </p>
+      </article>
+      <article class="browser">
+        <h2>Microsoft Edge</h2>
+        <p>
+          Microsoft Edge is a web browser developed by Microsoft, released in
+          2015. Microsoft Edge replaced Internet Explorer.
+        </p>
+      </article>
+    </article>
+    <button type="button" onclick="alert('Hello world!')">Click Me!</button>
+    <!-- the autofocus puts 1st focus or priority on the button  -->
+    <!-- <button type="button" autofocus onclick="alert('Hello world!')">Click Me!</button> -->
+    <button type="button" disabled>Click Me!</button>
 
-<form action="/action_page.php" method="get">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <button type="submit" value="Submit">Submit</button>
-  <button type="reset" value="Reset">Reset</button>
-</form>
+    <form action="/action_page.php" method="get">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" /><br /><br />
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" /><br /><br />
+      <button type="submit" value="Submit">Submit</button>
+      <button type="reset" value="Reset">Reset</button>
+    </form>
 
-<table>
-  <colgroup>
-    <col span="2" style="background-color:red">
-    <col style="background-color:yellow">
-  </colgroup>
-  <tr>
-    <th>ISBN</th>
-    <th>Title</th>
-    <th>Price</th>
-  </tr>
-  <tr>
-    <td>3476896</td>
-    <td>My first HTML</td>
-    <td>$53</td>
-  </tr>
-  <tr>
-    <td>5869207</td>
-    <td>My first CSS</td>
-    <td>$49</td>
-  </tr>
-</table>
+    <table>
+      <colgroup>
+        <col span="2" style="background-color: red" />
+        <col style="background-color: yellow" />
+      </colgroup>
+      <tr>
+        <th>ISBN</th>
+        <th>Title</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>3476896</td>
+        <td>My first HTML</td>
+        <td>$53</td>
+      </tr>
+      <tr>
+        <td>5869207</td>
+        <td>My first CSS</td>
+        <td>$49</td>
+      </tr>
+    </table>
 
-<form action="/action_page.php" method="get">
-  <label for="browser">Choose your browser from the list:</label>
-  <input list="browsers" name="browser" id="browser">
-  <datalist id="browsers">
-    <option value="Edge">
-    <option value="Firefox">
-    <option value="Chrome">
-    <option value="Opera">
-    <option value="Safari">
-  </datalist>
-  <input type="submit">
-</form>
+    <form action="/action_page.php" method="get">
+      <label for="browser">Choose your browser from the list:</label>
+      <input list="browsers" name="browser" id="browser" />
+      <datalist id="browsers">
+        <option value="Edge"></option>
+        <option value="Firefox"></option>
+        <option value="Chrome"></option>
+        <option value="Opera"></option>
+        <option value="Safari"></option>
+      </datalist>
 
-    </body>
-    </html>
+      <input type="submit" />
+    </form>
+    <p>
+      This text has an underline:
+      <span style="text-decoration: underline">Underlined text</span>
+    </p>
+    <p>
+      This text has a line through it:
+      <span style="text-decoration: line-through">Strikethrough text</span>
+    </p>
+    <p>
+      This text is both underlined and has a line through it:
+      <span style="text-decoration: underline line-through">Underlined and strikethrough text</span>
+    </p>
+  </body>
+</html>
