@@ -12,7 +12,9 @@
   </head>
   <body style="background-color: chartreuse">
     <h1>The div element</h1>
-
+    <p><a href="#section1">Go to Section 1</a></p>
+    <p><a href="#section2">Go to Section 2</a></p>
+    
     <div class="myDiv">
       <h2>This is a heading in a div element</h2>
       <p>This is some text in a div element.</p>
@@ -373,5 +375,59 @@
       <br><br>
       <input type="submit" value="click here">
     </form>
+    <!-- different types of "type" atribute in input tag -->
+    <form>
+      <fieldset>
+        <legend>different types of "type" atribute in input tag</legend>
+      <input type="text" name="username" placeholder="Enter your username">
+      <input type="password" name="password" placeholder="Enter your password">
+      <br><br>
+      <label for="hobbies">Hobbies(checkbox type)</label>
+      <input type="checkbox" name="hobbies" value="reading"> Reading
+      <input type="checkbox" name="hobbies" value="painting"> Painting
+      <br><br>
+      <label for="radio">Radio: (radio type)</label>
+      <input type="radio" name="gender" value="male"> Male
+      <input type="radio" name="gender" value="female"> Female
+      <br><br>
+      <label for="file">File(file type)</label>
+      <input type="file" name="fileupload">
+      <br><br>
+      <label for="age">Age (number type)</label>
+      <input type="number" name="age" id="age" min="0" max="100">
+      <br><br>
+      <label for="date">Date (date type)</label>
+      <input type="date" name="birthdate">
+      <br><br>
+      <label for="email">Email:(email type)</label>
+      <input type="email" name="email" placeholder="Enter your email">
+      <br><br>
+      <input type="submit" value="Submit">
+      <br><br>
+    </fieldset>
+    </form>
+    <br>
+    <textarea name="textarea1" id="textarea1" cols="30" rows="10" placeholder="enter text here..."></textarea>
+    <br><br>
+    <details>
+      <summary>
+        What is youer name?
+      </summary>
+      <p>My name is Lokesh singh</p>
+    </details>
+    <details>
+      <summary>
+        How old are you?
+      </summary>
+      <p>i am 21 years old</p>
+    </details>
+    
+    
+    <h1><a name="section1"></a>Section 1</h1>
+    <p>This is the content of Section 1.</p>
+
+    <h2><a id="section2"></a>Section 2</h2>
+    <p>This is the content of Section 2.</p>
+
   </body>
 </html>
