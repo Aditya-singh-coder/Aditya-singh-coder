@@ -2,26 +2,29 @@
 using namespace std;
 int main()
 {
-    int  n = 6;
-    int arr[n] = {5, 2, 4, 6, 1, 3};
+    int arr[] = {1, 4, 6, 32, 66, 3, 2};
+    int n = sizeof(arr) / sizeof(arr[0]);
     for (int i = 1; i < n; i++)
     {
-        int key = arr[i];
         int j = i - 1;
-
-        while (j >= 0 && arr[j] > key)
+        int temp = arr[i];
+        for (j; j >= 0; j--)
         {
-            arr[j + 1] = arr[j];
-            j--;
+            if (arr[j] > temp)
+            {
+                arr[j + 1] = arr[j];
+            }
+            else
+            {
+                break;
+            }
         }
-        arr[j + 1] = key;
+        arr[j + 1] = temp;
     }
 
-    cout << "the sorted array is ";
-    for (int k = 0; k < n; k++)
+    for (int i = 0; i < n; i++)
     {
-        cout << arr[k] << ", ";
+        cout << arr[i] << " ";
     }
-
     return 0;
 }
