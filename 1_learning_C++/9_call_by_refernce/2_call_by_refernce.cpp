@@ -9,7 +9,7 @@
     heap memory is much bigger than stack memory and can handle bigger values of n.
     to create heap memory we use "new" syntax.
     we can't create variables inside heap memory so we connect with a piinter as shown below */
-#include <iostream>
+#include<iostream>
 using namespace std;
 int getsum(int* arr,int n){
     int sum =0;
@@ -21,16 +21,20 @@ int getsum(int* arr,int n){
 int main()
 {
     int n;
+    cout <<"enter size of array "<<endl;
     cin >> n;
 
     // variable size array
     int *arr = new int[n];
 
     // taking input in array
+    cout <<"give imput in array "<<endl;
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
     }
 
     int ans = getsum(arr, n);
+    cout << "answer is "<< ans <<endl;
+    return 0;
 }
