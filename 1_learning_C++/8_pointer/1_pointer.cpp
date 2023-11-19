@@ -13,8 +13,7 @@ int main()
     
 
     cout <<"(4) "<< *arr + 1 <<endl;   // it takes value of arr[0] and then adds 1 to it.
-    cout <<"(5)  " << *(arr+1)<<endl;    // it takes value of arr[1]
-
+    cout <<"(5)  " << *(arr+1)<<endl;    // it will give value of arr[1]
     cout << "(6) "<<*(arr +2) <<endl;    // it will give value of arr[2].
 
     int i=2;
@@ -33,6 +32,17 @@ int main()
     cout <<"(11) "<< sizeof(ptr) <<endl;
     cout <<"(12) "<< sizeof(*ptr)<<endl;
     cout <<"(13) "<< sizeof(&ptr)<<endl;
+
+    //we cannot change address of an array. example- 
+    //temp = temp +1;      -> it will an error
+
+    //but we can do samwe operation in pointer. example-
+    int *p = &temp[0];
+    cout <<"(14) before "<<p<<endl;
+    p =p+1;
+    cout <<"(15) after "<<p<<endl;
+    // same operation is possible in pointer because here we are just changing where pointer is going to point.
+    //we are not changing the address of pointer itself.
     return 0;
 
 }
