@@ -7,8 +7,17 @@ struct charset{
 };
 
 void keyvalue(char* s, int* i){
-    scanf(" %c", s); // space before %c to skip any whitespace characters
+    printf("enter the values of s and i\n");
+    scanf(" %c", s);
     scanf("%d", i);
+    /*
+    In the main function, when you call keyvalue, you're passing the addresses of cs.s and cs.i:
+    keyvalue(&cs.s,&cs.i);
+    So, within the keyvalue function, s and i are already pointers. They already hold the addresses of cs.s and cs.i,
+    respectively. Therefore, you don't need to use the & operator in the scanf calls. 
+    If you did, you'd be trying to get the address of the pointers themselves,
+    not the addresses they're pointing to, which is not what you want.
+    */
 }
 
 int main(){

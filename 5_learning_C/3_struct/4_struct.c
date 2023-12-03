@@ -8,7 +8,9 @@ struct point
 
 void print(struct point *ptr)
 {
-    printf("%d %d\n", ptr->x, ptr->y); // ptr->x gives the value of x from struct point. similar is case with ptr ->y
+    printf("%d %d\n", ptr->x, ptr->y);
+    //ptr->x means "access the x member of the structure that ptr points to".
+    //  This is equivalent to (*ptr).x, but ptr->x is easier to read and write.
 }
 
 int main(){
