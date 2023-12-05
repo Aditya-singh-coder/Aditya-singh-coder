@@ -45,8 +45,6 @@ void delete(struct node **head, int position) {
     temp->link = next;
 }
 
-// Assuming add_node is implemented correctly
-
 int main(){
     struct node *head = malloc(sizeof(struct node));
     head->data=12;
