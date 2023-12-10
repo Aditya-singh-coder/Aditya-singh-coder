@@ -28,6 +28,7 @@ void add_node(st *head, int data)
         head = head->next;
     }
     head->next = ptr;
+    ptr->prev=head;
 }
 
 st *reverse_list(st *head)
@@ -42,7 +43,8 @@ st *reverse_list(st *head)
         head=ptr;
         ptr=ptr->prev;
     }
-    ptr->next = head;;
+    ptr->prev=NULL;
+    ptr->next = head;
     head=ptr;
     return head;
 }
@@ -59,7 +61,7 @@ int main()
     add_node(head, 24);
     add_node(head, 45);
 
-    printf("before reverse\n");
+    printf("\nbefore reverse\n");
     print(head);
 
     head= reverse_list(head);
