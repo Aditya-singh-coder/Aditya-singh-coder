@@ -1,72 +1,74 @@
-// reverse a double linked list
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct node
-{
+typedef struct node {
     struct node *prev;
-    int data;
     struct node *next;
+    int data;
 } st;
 
-void print(st *head)
-{
-    while (head)
-    {
-        printf("%d ", head->data);
+void print(const char *msg, const st *head) {
+    printf("%s", msg);
+    while (head) {
+        printf(" %d", head->data);
         head = head->next;
     }
+    printf("\n");
 }
 
-void add_node(st *head, int data)
-{
+st *add_node(st **head, int data) {
     st *ptr = malloc(sizeof(st));
+    if (ptr == NULL)
+        return NULL;
     ptr->data = data;
+    ptr->prev = NULL;
     ptr->next = NULL;
-    while (head->next)
-    {
-        head = head->next;
+    if (*head == NULL) {
+        return *head = ptr;
+    } else {
+        st *last = *head;
+        while (last->next) {
+            last = last->next;
+        }
+        ptr->prev = last;
+        return last->next = ptr;
     }
-    head->next = ptr;
-    ptr->prev=head;
 }
 
-st *reverse_list(st *head)
-{
-    st *ptr = head->next;
-    head->next = NULL;
-    while (ptr->next!= NULL)
-    {
-        head->prev=ptr;
-        ptr->prev=ptr->next;
-        ptr->next=head;
-        head=ptr;
-        ptr=ptr->prev;
+st *reverse_list(st *head) {
+    // iterate on the list, swapping the next and prev links
+    for (st *node = head; node; node = node->prev) {
+        st *next = node->next;
+        node->next = node->prev;
+        node->prev = next;
+        head = node;
     }
-    ptr->prev=NULL;
-    ptr->next = head;
-    head=ptr;
     return head;
 }
 
-int main()
+void free_list(st **headp) {
+    for (st *node = *headp; node;) {
+        st *next = node->next;
+        free(node);
+        node = next;
+    }
+    *headp = NULL;
+}
+
+int main(void)
 {
-    st *head = malloc(sizeof(st));
-    head->prev = NULL;
-    head->data = 12;
-    head->next = NULL;
+    st *head = NULL;
 
-    add_node(head, 22);
-    add_node(head, 1);
-    add_node(head, 24);
-    add_node(head, 45);
+    add_node(&head, 12);
+    add_node(&head, 22);
+    add_node(&head, 1);
+    add_node(&head, 24);
+    add_node(&head, 45);
 
-    printf("\nbefore reverse\n");
-    print(head);
+    print("before reverse: ", head);
+    head = reverse_list(head);
+    print("after reverse:  ", head);
 
-    head= reverse_list(head);
-    printf("\nafter reverse\n");
-    print(head);
-
+    free_list(&head);
     return 0;
 }
