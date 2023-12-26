@@ -1,3 +1,4 @@
+// in bubble sort, largest element keeps being placed from end side in each round till we have fully sorted the array
 #include<iostream>
 using namespace std;
 int main() 

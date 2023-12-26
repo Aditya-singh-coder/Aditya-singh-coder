@@ -63,7 +63,7 @@ int main()
 {
     int arr[6] = {7, 8, 1, 4, 5, 2};
     mergeSort(arr, 0, 5);
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 6; i++)
     {
         cout << arr[i]<<" ";
     }
