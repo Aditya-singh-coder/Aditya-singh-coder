@@ -1,58 +1,38 @@
-// learning uses of "this" 
-#include<iostream>
+// using heap memory/dynamic memory with class
+#include <iostream>
+
 using namespace std;
 
-class hero {
-    
-    //properties
+class hero
+{
     private:
-    int health;
+    string type;
 
     public:
-    char *name;
     char level;
-    static int timeToComplete;
+    int health;
 
-    hero() {
-        cout << "Simple constructor called" << endl;
+    // setter function
+    void set_type(string t)
+    {
+        type = t;
     }
 
-    //Paramerterised Constructor
-    hero(int health) {
-        this -> health = health;
-        // this -> health represnts the health in main class.
-        //  while only "health" represents health written inside this class
-        // "this" will always represent the main class
-    }
-
-    hero(int health, char level) {
-        this -> level = level;
-        this -> health = health;
-    }
-
-    int gethealth() {
-        return health;
-    }
-
-    char getlevel() {
-        return level;
-    }
-
-    void sethealth(int h) {
-        health = h;
-    }
-
-    void setlevel(char ch) {
-        level = ch;
+    // getter function
+    string get_type()
+    {
+        return type;
     }
 };
- int main(){
-    hero lokesh;
-    lokesh.level='A';
-    cout << "Lokesh's level:"<<lokesh.level<<endl;
-    lokesh.sethealth(79); 
-    lokesh.setlevel('B');
-    cout << "Lokesh's health: " << lokesh.gethealth()<<endl;
-    cout << "Lokesh's level: "<<lokesh.getlevel()<<endl;
+
+int main()
+{
+    hero *ramesh = new hero;
+    ramesh->health=79;  // it can also be written as (*ramesh).health=79;
+    ramesh->level='C';
+    ramesh->set_type("defence");
+
+    cout << "Ramesh's health: "<<ramesh->health<<", level: "<<ramesh->level<<" and its type: "<<ramesh->get_type()<<endl;
     return 0;
- }
+   
+}

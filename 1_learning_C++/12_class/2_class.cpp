@@ -1,45 +1,46 @@
-//  dynamic allcation/heap allcation of a class
-#include<iostream>
+// operations in private class object
+#include <iostream>
+
 using namespace std;
 
-class hero{
-    private:
-    int health;         // class memner inside private type can't be accesed outside of class
-    // by default class memeber are
-    public:
+class hero
+{
+    // you cannot view or change value of private class object from anywhere.
+    // for changing and viewing the value of private object we stter and getter functions.
+private:
+    string type;
+
+public:
     char level;
+    int health;
 
-    int print(){
-        cout << "health: "<<health<<endl;  // this can access health as it is inside the class
+    // setter function
+    void set_type(string t)
+    {
+        type = t;
     }
 
-    // getter functions:
-
-    int gethealth(){
-        return health;
-    }
-
-    char getlevel(){
-        return level;
-    }
-
-    // setter functions:
-
-    void sethealth(int h){
-        health=h;
-    }
-
-    void setlevel(char l){
-        level=l;
+    // getter function
+    string get_type()
+    {
+        return type;
     }
 };
 
-int main(){
-    hero *lokesh= new hero;
-    lokesh->sethealth(79); // it can also be written as (*lokesh).sethealth]
-    lokesh->setlevel('Z');
+int main()
+{
+    hero lokesh;
+    hero *ramesh = new hero;
 
-    cout << "lokesh's health: "<<lokesh->gethealth()<<endl;
-    cout<<" lokesh's level "<<lokesh->getlevel()<<endl;
+    lokesh.health = 77;
+    lokesh.level = 'A';
+    // lokesh.type= "attack";  --> this will give error
+    cout << " lokesh's level:" << lokesh.level << " and health: " << lokesh.health << endl;
+    // cout <<" lokesh's type: " <<lokesh.type<<endl;  -->this will give error
+
+    // using getter and setter function for class objesct type
+    lokesh.set_type("attack");
+
+    cout << " lokesh's type is: " << lokesh.get_type() << endl;
     return 0;
 }
