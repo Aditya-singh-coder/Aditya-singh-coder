@@ -1,36 +1,50 @@
-// program to add node at start
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class node{
-    public:
+class node
+{
+
+public:
     int data;
     node *link;
 
-    // condstructor
-    node(int data){
-        this->data=data;
-        this->link=nullptr;
+    node(int data)
+    {
+        this->data = data;
+        this->link = nullptr;
     }
 };
 
-void insert_node(node* &head, int d){
-    node* temp= new node(d);
-    temp->link=head;
-    head=temp;
-}
-void print(node* &head){
-    node* temp= head;
-    while(temp!=nullptr){
-        cout << temp->data<<" ";
-        temp=temp->link;
+void add_node(node *&head, int data)
+{
+    node *ptr = new node(data);
+    node *ptr2 = head;
+
+    while (ptr2->link != nullptr)
+    {
+        ptr2 = ptr2->link;
     }
-} 
+    ptr2->link = ptr;
+}
 
-int main(){
-    node* head= new node(10); 
-    insert_node(head,12);
+void print(node *&head)
+{
+    node *ptr = head;
+    while (ptr != nullptr)
+    {
+        cout << ptr->data << " ";
+        ptr = ptr->link;
+    }
+}
+
+int main()
+{
+    node *head = new node(11);
+    add_node(head, 1);
+    add_node(head, 66);
+    add_node(head, 8);
+    add_node(head, 2);
+    add_node(head, 4);
     print(head);
-
     return 0;
 }

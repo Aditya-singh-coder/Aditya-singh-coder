@@ -1,39 +1,68 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class node{
-    public:
-    int data;
-    node* link;
+class node
+{
 
-    node(){}
-    node(int d){
-        this->data=d;
-        this->link=nullptr;
+public:
+    int data;
+    node *link;
+
+    node(int data)
+    {
+        this->data = data;
+        this->link = nullptr;
     }
 };
 
+void add_node(node *&head, int data)
+{
+    node *ptr = new node(data);
+    node *ptr2 = head;
 
-void insert_at_end(node* &head,int dt){
-    node* temp= head;
-    node* ptr= new node(dt);
-    while(temp->link!=nullptr){
-        temp=temp->link;
+    while (ptr2->link != nullptr)
+    {
+        ptr2 = ptr2->link;
     }
-    temp->link=ptr;
+    ptr2->link = ptr;
 }
 
-void print(node* &head){
-    node* temp=head;
-    while(temp!=nullptr){
-        cout << temp->data<<" ";
-        temp=temp->link;
+void print(node *&head)
+{
+    node *ptr = head;
+    while (ptr != nullptr)
+    {
+        cout << ptr->data << " ";
+        ptr = ptr->link;
     }
 }
-int main(){
-    node *head= new node(10);
-    insert_at_end(head,22);
-    insert_at_end(head,8);
+
+void reverse(node* &head){
+    node* ptr=head;
+    node* ptr2=head->link;
+    node* ptr3= ptr2->link;
+    ptr->link=nullptr;
+    while(ptr2->link!=nullptr){
+        ptr2->link=ptr;
+        ptr=ptr2;
+        ptr2=ptr3;
+        ptr3=ptr3->link;
+    }
+    ptr2->link=ptr;
+    head=ptr2;
+}
+int main()
+{
+    node *head = new node(11);
+    add_node(head, 1);
+    add_node(head, 66);
+    add_node(head, 8);
+    add_node(head, 2);
+    add_node(head, 4);
+    print(head);
+
+    reverse(head);
+    cout <<"\nafter reverse"<<endl;
     print(head);
     return 0;
 }
